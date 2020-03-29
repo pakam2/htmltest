@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic HTML</title>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <style>
+        body {
+            overflow: hidden;
+        }
+        .container {
+            font-family: Montserrat;
+            position: static;
+            height: 900px;
+            margin-left: 19.8%;
+            margin-right: 19.8%;
+        }
+
+        .tophead {
+            background-color: #0000FF;
+            width: 100%;
+            height: 200px;
+            color: white;
+            overflow: hidden;
+        }
+
+        .headleft {
+            height: 200px;
+            float: left;
+            width: 80%;
+            overflow: hidden;
+        }
+
+        .headrigth {
+            width: 20%;
+            float: right;
+            height: 200px;
+        }
+
+        .circlewrapper {
+            position: relative;
+            top: 48%;
+            left: 20%;
+            width: 200px;
+            height: 150px;
+            transform: translate(-20%, -35%);
+            float: left;
+        }
+
+        #circle {
+            position: relative;
+            width: 120px;
+            height: 120px;
+            background-color: lightgray;
+            -moz-border-radius: 60px;
+            -webkit-border-radius: 60px;
+            border-radius: 60px;
+        }
+
+        #person {
+            top: 45%;
+            right: 45%;
+            position: relative;
+            height: 20px;
+            width: 150px;
+            float: right;
+            transform: translate(0%, -15%);
+            text-align: left;
+        }
+
+        #person p {
+            margin-top: 0%;
+            margin-bottom: 0%;
+        }
+
+        .persondata {
+            position: relative;
+            top: 20%;
+            font-size: 12px;
+        }
+
+        .tophead:after {
+            content: '';
+            clear: both;
+        }
+
+        .maincontent {
+            width: 100%;
+            height: 930px;
+        }
+
+        .maincontent:after {
+            content: '';
+            clear: both;
+        }
+        .sectionstyle {
+            float: left;
+            height: 100%;
+            width: 30%;
+            background-color:#f2f2f2;
+            overflow: hidden;
+        }
+        .asidestyle {
+            height: 100%;
+            width: 70%;
+            float: left;
+            background-color: #f8f8fa;
+            overflow: auto;
+        }
+
+        .footwrapper {
+            background-color: #0000FF;
+            color: white;
+            height: 45px;
+            width: 60%;
+            left:0%;
+            margin-left: 20%;
+            position: absolute;
+            bottom: 0%;
+            text-align: center;
+        }
+        .namestrong {
+            font-size: 20px;
+        }
+
+        .svgsize {
+            width: 20px;
+            height: 20px;
+        }
+
+        .icon img {
+            padding-top: 5px;
+        }
+
+        .icon span {
+            padding-left: 10px;
+            height: 10px;
+            line-height: 10px;
+            text-align: center;
+        }
+        .portfolio img{
+            padding-left: 10px;
+            padding-right: 10px;
+            padding-top: 20px;
+        }
+        .portfolio span {
+            font-size: 20px;
+        }
+        .portfoliomain {
+            padding-top: 3%;
+            position: relative;
+            padding-left: 12%;
+            padding-right: 10%;
+            height: 800px;
+            max-width:80%;
+        }
+
+        .card {
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        height: 100%;
+
+        max-width: 320px;
+        margin: auto;
+        text-align: center;
+        margin-top: 10px;
+        margin-right: 10px;
+        margin-left: 10px;
+        }
+
+        .title {
+        color: grey;
+        font-size: 18px;
+        }
+
+        button {
+        border: none;
+        outline: 0;
+        display: inline-block;
+        padding: 8px;
+        color: black;
+        background-color:white;
+        text-align: center;
+        cursor: pointer;
+        width: 320px;
+        font-size: 18px;
+        }
+
+        a {
+        text-decoration: none;
+        font-size: 22px;
+        color: black;
+        }
+
+        button:hover, a:hover {
+            background-color:bisque;
+            color: #0000FF;
+            opacity: 0.7;
+        }
+        .cardcontent {
+            background-color: #d2d2df;
+            width: 320px;
+            height: 200px;
+        }
+        .cardcontent p {
+            margin-top: 0%;
+            padding-top: 0%;
+        }
+        .cardcolumnone {
+            width: 200px;
+
+        }
+        .column {
+            margin-bottom: 10px;
+            float: left;
+        }
+
+        .row {
+            width: 250px;
+            margin: 0 -5px;}
+
+        /* Clear floats after the columns */
+        .row:after {
+        content: "";
+        display: table;
+        clear: both;
+        }
+        .sectionicon {
+            position: relative;
+            padding-left: 10%;
+        }
+        .sectionicon img{
+            width: 30px;
+            height: 30px;
+            position: relative;
+            top:9px;
+            left:5px;
+        }
+        .sectionicon span {
+            padding-left: 10px;
+        }
+        .sectionicon p {
+            font-size: 12px;
+            margin-bottom: 2px;
+            margin-top: 0px;
+
+        }
+        .sectionicon::after {
+            clear: both;
+        }
+        .iconseperator {
+            padding-left: 4px;
+        }
+        .iconholder {
+            padding-right: 20px;
+            width: 300px;
+        }
+        .oneicon {
+            padding-left: 12px;
+            padding-right: 5px;
+            float: left;
+        }
+        .oneicon p {
+            padding-top: 5px;
+            padding-left: 4px;
+            font-weight: bold;
+        }
+        .iconholder::after {
+            content: '';
+            clear: both;
+        }.clearboth {
+            content: '';
+            clear: both;
+        }
+    </style>
+    <div class="container">
+        <div class="tophead">
+            <header>
+                <div class="headleft">
+                    <div class='circlewrapper'>
+                        <div id="circle"></div>
+                    </div>
+                    <div id="person">
+                        <p class="namestrong"><strong>Andrew Smith</strong></p>
+                        <p>UX Designer</p>
+                    </div>
+                </div>
+                <div class="headrigth">
+                    <div class="persondata">
+                        <div class="icon"><img src="map-marker-alt-solid.svg" class="svgsize" alt="Street"><span>Street
+                                address</span></div>
+                        <br>
+                        <div class='icon'><img src="address-book-solid.svg" class="svgsize"
+                                alt="Street"><span>email@gmail.com</span></div>
+                        <br>
+                        <div class='icon'><img src="phone-solid.svg" class="svgsize" alt="Street"><span>+48 222 3333
+                                3333</span></div>
+                    </div>
+                </div>
+
+            </header>
+        </div>
+
+        <div class="maincontent">
+            <section class="sectionstyle">
+                <div class="sectioninfo">
+
+                    <div class="sectionicon">
+                        <img src="info-circle-solid.svg"><span><strong>Portfolio</strong></span>
+                        <br><br>
+                        <p>Lorem ipsum dolor sit amet enim. Etiam ullamcorper. Suspendisse a 
+                            pellentesque dui, non felis. Maecenas malesuada elit lectus felis, malesuada ultricies.</p>
+                    </div>
+                    <br>
+                    <div class="sectionicon">
+                        <img src="info-circle-solid.svg"><span><strong>Interests</strong></span>
+                        <br><br>
+                        <div class="iconholder">
+                            <div class="oneicon">
+                                <img src="map-regular.svg" class="iconseperator"><p>Lorem</p>
+                            </div>
+                            <div class="oneicon">
+                                <img src="network-wired-solid.svg" class="iconseperator"><p>Lorem</p>
+                            </div>
+                            <div class="oneicon">
+                                <img src="ethernet-solid.svg" class="iconseperator"><p>Lorem</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class=clearboth></div>
+                    <br>
+                    <div class="sectionicon">
+                        <img src="info-circle-solid.svg"><span><strong>Awards</strong></span>
+                        <br><br>
+                        <p>Lorem ipsum dolor sit amet</p>
+                        <p>Lorem ipsum dolor sit amet</p>
+                        <p>Lorem ipsum dolor sit amet</p>
+                    </div>
+                    
+                </div>
+
+
+
+
+
+
+                
+            </section>
+            <aside class="asidestyle">
+                <div class="portfolio">
+                    <img src="portrait-solid.svg" class="svgsize" alt="Portfolio"><span><strong>Portfolio</strong></span>
+                </div>
+                <div class='portfoliomain'>
+                                <div class="column">            
+                                    <div class="card">
+
+                                    <div class="cardcontent"></div>
+                                        <button>Check it out!</button>
+                                    </div>
+                                </div>
+                                <div class="column">            
+                                    <div class="card">
+
+                                    <div class="cardcontent"></div>
+                                        <button>Check it out!</button>
+                                    </div>
+                                </div>
+                                <div class="column">            
+                                    <div class="card">
+
+                                    <div class="cardcontent"></div>
+                                        <button>Check it out!</button>
+                                    </div>
+                                </div>
+
+                                <div class="column">            
+                                    <div class="card">
+
+                                    <div class="cardcontent"></div>
+                                        <button>Check it out!</button>
+                                    </div>
+                                </div>
+                                
+                                <div class="column">            
+                                    <div class="card">
+
+                                    <div class="cardcontent"></div>
+                                        <button>Check it out!</button>
+                                    </div>
+                                </div>
+
+                                <div class="column">            
+                                    <div class="card">
+
+                                    <div class="cardcontent"></div>
+                                        <button>Check it out!</button>
+                                    </div>
+                                </div>
+                    </div>
+                </div>
+            </aside>
+        </div>
+
+    </div>
+
+    <div class="footwrapper">
+        <div class="footerclass">
+            <footer>footegdfssadfdsafasdfasdfasdfgdfsr</footer>
+        </div>
+    </div>
+</body>
+
+</html>
